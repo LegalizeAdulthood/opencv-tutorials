@@ -3,6 +3,7 @@ add_subdirectory(basic_drawing)
 add_subdirectory(Smoothing)
 add_subdirectory(HitMiss)
 add_subdirectory(morph_lines_detection)
+add_subdirectory(Pyramids)
 
 add_executable(4_eroding_and_dilating Morphology_1.cpp)
 target_link_libraries(4_eroding_and_dilating PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
