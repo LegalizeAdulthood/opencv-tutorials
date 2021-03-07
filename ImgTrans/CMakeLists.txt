@@ -9,3 +9,7 @@ set_property(TARGET 2_adding_borders PROPERTY FOLDER "Image Processing/Transform
 add_executable(3_sobel_derivatives Sobel_Demo.cpp)
 target_link_libraries(3_sobel_derivatives PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 3_sobel_derivatives PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(4_laplace_operator Laplace_Demo.cpp)
+target_link_libraries(4_laplace_operator PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 4_laplace_operator PROPERTY FOLDER "Image Processing/Transformations")
