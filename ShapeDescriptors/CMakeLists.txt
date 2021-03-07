@@ -9,3 +9,7 @@ set_property(TARGET 2_convex_hull PROPERTY FOLDER "Image Processing/Contours")
 add_executable(3_contour_bounding_box generalContours_demo1.cpp)
 target_link_libraries(3_contour_bounding_box PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 3_contour_bounding_box PROPERTY FOLDER "Image Processing/Contours")
+
+add_executable(4_contour_bounding_rotated_box generalContours_demo2.cpp)
+target_link_libraries(4_contour_bounding_rotated_box PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 4_contour_bounding_rotated_box PROPERTY FOLDER "Image Processing/Contours")
