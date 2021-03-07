@@ -1,0 +1,3 @@
+add_executable(6_changing_contrast_brightness_image changing_contrast_brightness_image.cpp)
+target_link_libraries(6_changing_contrast_brightness_image OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc OpenCV::Core)
+set_property(TARGET 6_changing_contrast_brightness_image PROPERTY FOLDER "Core")
