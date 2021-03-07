@@ -5,3 +5,7 @@ set_property(TARGET 1_histogram_equalization PROPERTY FOLDER "Image Processing/H
 add_executable(2_histogram_calculation calcHist_Demo.cpp)
 target_link_libraries(2_histogram_calculation PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 2_histogram_calculation PROPERTY FOLDER "Image Processing/Histograms")
+
+add_executable(3_histogram_comparison compareHist_Demo.cpp)
+target_link_libraries(3_histogram_comparison PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 3_histogram_comparison PROPERTY FOLDER "Image Processing/Histograms")
