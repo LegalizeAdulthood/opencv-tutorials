@@ -17,3 +17,20 @@ set_property(TARGET 4_laplace_operator PROPERTY FOLDER "Image Processing/Transfo
 add_executable(5_canny_edge_detector CannyDetector_Demo.cpp)
 target_link_libraries(5_canny_edge_detector PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 5_canny_edge_detector PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(5_hough_line_transform houghlines.cpp)
+target_link_libraries(5_hough_line_transform PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 5_hough_line_transform PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(5_hough_line_transform_fancy HoughLines_Demo.cpp)
+target_link_libraries(5_hough_line_transform_fancy PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 5_hough_line_transform_fancy PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(6_hough_circle_transform houghcircles.cpp)
+target_link_libraries(6_hough_circle_transform PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 6_hough_circle_transform PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(6_hough_circle_transform_fancy HoughCircle_Demo.cpp)
+target_link_libraries(6_hough_circle_transform_fancy PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 6_hough_circle_transform_fancy PROPERTY FOLDER "Image Processing/Transformations")
+
