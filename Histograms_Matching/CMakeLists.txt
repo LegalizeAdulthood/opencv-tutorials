@@ -17,3 +17,7 @@ set_property(TARGET 4_back_projection PROPERTY FOLDER "Image Processing/Histogra
 add_executable(4_back_projection_improved calcBackProject_Demo2.cpp)
 target_link_libraries(4_back_projection_improved PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 4_back_projection_improved PROPERTY FOLDER "Image Processing/Histograms")
+
+add_executable(5_template_matching MatchTemplate_Demo.cpp)
+target_link_libraries(5_template_matching PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 5_template_matching PROPERTY FOLDER "Image Processing/Histograms")
