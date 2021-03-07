@@ -1,1 +1,2 @@
 add_subdirectory(changing_contrast_brightness_image)
+add_subdirectory(basic_drawing)

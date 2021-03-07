@@ -1,0 +1,3 @@
+add_executable(9_how_to_use_OpenCV_parallel_for_ how_to_use_OpenCV_parallel_for_.cpp)
+target_link_libraries(9_how_to_use_OpenCV_parallel_for_ OpenCV::ImgCodecs OpenCV::Core)
+set_property(TARGET 9_how_to_use_OpenCV_parallel_for_ PROPERTY FOLDER "Core")
