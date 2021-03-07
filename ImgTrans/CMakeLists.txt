@@ -13,3 +13,7 @@ set_property(TARGET 3_sobel_derivatives PROPERTY FOLDER "Image Processing/Transf
 add_executable(4_laplace_operator Laplace_Demo.cpp)
 target_link_libraries(4_laplace_operator PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 4_laplace_operator PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(5_canny_edge_detector CannyDetector_Demo.cpp)
+target_link_libraries(5_canny_edge_detector PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 5_canny_edge_detector PROPERTY FOLDER "Image Processing/Transformations")
