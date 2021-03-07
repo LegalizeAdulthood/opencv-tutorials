@@ -8,3 +8,4 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(core)
 add_subdirectory(ImgProc)
+add_subdirectory(ImgTrans)
