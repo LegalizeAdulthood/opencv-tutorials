@@ -7,5 +7,6 @@ find_package(OpenCV REQUIRED)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(core)
+add_subdirectory(Histograms_Matching)
 add_subdirectory(ImgProc)
 add_subdirectory(ImgTrans)
