@@ -34,3 +34,10 @@ add_executable(6_hough_circle_transform_fancy HoughCircle_Demo.cpp)
 target_link_libraries(6_hough_circle_transform_fancy PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
 set_property(TARGET 6_hough_circle_transform_fancy PROPERTY FOLDER "Image Processing/Transformations")
 
+add_executable(7_remapping Remap_Demo.cpp)
+target_link_libraries(7_remapping PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 7_remapping PROPERTY FOLDER "Image Processing/Transformations")
+
+add_executable(8_affine_transformations affine.cpp)
+target_link_libraries(8_affine_transformations PUBLIC OpenCV::HighGui OpenCV::ImgCodecs OpenCV::ImgProc)
+set_property(TARGET 8_affine_transformations PROPERTY FOLDER "Image Processing/Transformations")
