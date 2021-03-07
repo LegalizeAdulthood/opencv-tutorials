@@ -35,4 +35,7 @@ if(OpenCV_FOUND)
     _opencv_add_lib_target(HighGui HIGH_GUI)
     _opencv_add_lib_target(ImgCodecs IMG_CODECS)
     _opencv_add_lib_target(ImgProc IMG_PROC)
+
+    target_link_libraries(OpenCV::ImgProc INTERFACE OpenCV::Core)
+    target_link_libraries(OpenCV::ImgCodecs INTERFACE OpenCV::Core)
 endif()
