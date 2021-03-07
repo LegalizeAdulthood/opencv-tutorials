@@ -1,2 +1,3 @@
 add_subdirectory(mat_the_basic_image_container)
 add_subdirectory(how_to_scan_images)
+add_subdirectory(mat_mask_operations)

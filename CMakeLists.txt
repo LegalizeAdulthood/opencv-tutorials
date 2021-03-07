@@ -4,4 +4,6 @@ project(opencv-tutorials)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 find_package(OpenCV REQUIRED)
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 add_subdirectory(core)
