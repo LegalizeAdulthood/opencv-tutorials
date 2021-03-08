@@ -1,3 +1,3 @@
 add_executable(1_mat_the_basic_image_container mat_the_basic_image_container.cpp)
-target_link_libraries(1_mat_the_basic_image_container OpenCV::Core)
+target_link_libraries(1_mat_the_basic_image_container PUBLIC OpenCV::Core)
 set_property(TARGET 1_mat_the_basic_image_container PROPERTY FOLDER "Core")

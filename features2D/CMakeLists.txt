@@ -1,0 +1,3 @@
+add_subdirectory(feature_description)
+add_subdirectory(feature_detection)
+add_subdirectory(feature_flann_matcher)

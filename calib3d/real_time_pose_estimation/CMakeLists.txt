@@ -1,21 +1,27 @@
-set(sample_dir ${CMAKE_CURRENT_SOURCE_DIR}/tutorial_code/calib3d/real_time_pose_estimation/src/)
-set(target example_tutorial_)
-
-set(sample_pnplib
-        ${sample_dir}CsvReader.cpp
-        ${sample_dir}CsvWriter.cpp
-        ${sample_dir}ModelRegistration.cpp
-        ${sample_dir}Mesh.cpp
-        ${sample_dir}Model.cpp
-        ${sample_dir}PnPProblem.cpp
-        ${sample_dir}Utils.cpp
-        ${sample_dir}RobustMatcher.cpp
+add_library(2_pose_estimation STATIC
+    src/CsvReader.cpp
+    src/CsvReader.h
+    src/CsvWriter.cpp
+    src/CsvWriter.h
+    src/Mesh.cpp
+    src/Mesh.h
+    src/Model.cpp
+    src/Model.h
+    src/ModelRegistration.cpp
+    src/ModelRegistration.h
+    src/PnPProblem.cpp
+    src/PnPProblem.h
+    src/RobustMatcher.cpp
+    src/RobustMatcher.h
+    src/Utils.cpp src/Utils.h
 )
+target_link_libraries(2_pose_estimation PUBLIC OpenCV::HighGui OpenCV::VideoIO OpenCV::Video OpenCV::Flann OpenCV::Features2D OpenCV::Calib3D OpenCV::ImgProc OpenCV::ImgCodecs)
+set_property(TARGET 2_pose_estimation PROPERTY FOLDER "Camera Calibration")
 
-ocv_include_modules_recurse(${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
+add_executable(2_pose_estimation_pnp_registration src/main_registration.cpp ${sample_pnplib})
+target_link_libraries(2_pose_estimation_pnp_registration PUBLIC 2_pose_estimation)
+set_property(TARGET 2_pose_estimation_pnp_registration PROPERTY FOLDER "Camera Calibration")
 
-add_executable( ${target}pnp_registration ${sample_dir}main_registration.cpp ${sample_pnplib} )
-add_executable( ${target}pnp_detection ${sample_dir}main_detection.cpp ${sample_pnplib} )
-
-ocv_target_link_libraries(${target}pnp_registration PRIVATE ${OPENCV_LINKER_LIBS} ${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
-ocv_target_link_libraries(${target}pnp_detection PRIVATE ${OPENCV_LINKER_LIBS} ${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
+add_executable(2_pose_estimation_pnp_detection src/main_detection.cpp ${sample_pnplib})
+target_link_libraries(2_pose_estimation_pnp_detection PUBLIC 2_pose_estimation)
+set_property(TARGET 2_pose_estimation_pnp_detection PROPERTY FOLDER "Camera Calibration")
