@@ -1,0 +1,10 @@
+add_subdirectory(AKAZE_tracking)
+add_subdirectory(feature_description)
+add_subdirectory(feature_detection)
+add_subdirectory(feature_flann_matcher)
+add_subdirectory(feature_homography)
+add_subdirectory(Homography)
+
+add_executable(09_akaze_local_features AKAZE_match.cpp)
+target_link_libraries(09_akaze_local_features PUBLIC OpenCV::HighGui OpenCV::Features2D OpenCV::ImgProc OpenCV::ImgCodecs)
+set_property(TARGET 09_akaze_local_features PROPERTY FOLDER "Tutorials/2D Features")

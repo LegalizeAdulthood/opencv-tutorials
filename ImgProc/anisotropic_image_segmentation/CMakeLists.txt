@@ -1,3 +1,0 @@
-add_executable(4_anisotropic_image_segmentation anisotropic_image_segmentation.cpp)
-target_link_libraries(4_anisotropic_image_segmentation PUBLIC OpenCV::HighGui OpenCV::ImgProc OpenCV::ImgCodecs)
-set_property(TARGET 4_anisotropic_image_segmentation PROPERTY FOLDER "Image Processing/Other")
