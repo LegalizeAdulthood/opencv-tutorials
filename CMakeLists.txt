@@ -6,4 +6,5 @@ find_package(OpenCV REQUIRED)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+add_subdirectory(samples)
 add_subdirectory(tutorials)
