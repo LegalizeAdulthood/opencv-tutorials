@@ -1,4 +1,5 @@
 add_subdirectory(meanshift)
+add_subdirectory(optical_flow)
 
 add_executable(3_background_subtraction bg_sub.cpp)
 target_link_libraries(3_background_subtraction PUBLIC OpenCV::HighGui OpenCV::Video OpenCV::VideoIO OpenCV::ImgProc OpenCV::ImgCodecs)
