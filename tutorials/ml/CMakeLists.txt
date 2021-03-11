@@ -1,1 +1,2 @@
 add_subdirectory(introduction_to_svm)
+add_subdirectory(non_linear_svms)
