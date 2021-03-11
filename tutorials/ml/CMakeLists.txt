@@ -1,2 +1,3 @@
+add_subdirectory(introduction_to_pca)
 add_subdirectory(introduction_to_svm)
 add_subdirectory(non_linear_svms)
